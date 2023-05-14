@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
-
-
 .container {
   display: flex;
   align-items: center;
@@ -64,16 +62,22 @@ li {
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #fff;
+    color: #ff758c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 1px 1px #000;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #3e8e41;
+  background-color: #ff758c;
+    color: #fff;
+    box-shadow: 3px 3px #000;
 }

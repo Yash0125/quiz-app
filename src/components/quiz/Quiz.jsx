@@ -50,6 +50,7 @@ const Quiz = () => {
   const handleSubmit = () => {
     setShowResult(true);
     setTime(60 - remainingTime);
+    clearTimeout();
   };
 
   return (
@@ -77,12 +78,14 @@ const Quiz = () => {
                 </p>
               </div>
             </div>
+
             <div className="question">
               <span id="question-number">{currentQuestion + 1}.</span>
               <span id="question-txt">
                 {QuizData[currentQuestion].question}
               </span>
             </div>
+            
             <div className="option-container">
               {QuizData[currentQuestion].options.map((option, i) => {
                 return (
@@ -98,6 +101,7 @@ const Quiz = () => {
                 );
               })}
             </div>
+
             {!isLastQuestion ? (
               <input
                 type="button"
@@ -113,6 +117,7 @@ const Quiz = () => {
                 onClick={handleSubmit}
               />
             )}
+
           </>
         )}
       </div>

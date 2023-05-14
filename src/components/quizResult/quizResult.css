@@ -1,52 +1,51 @@
-.show-score {
-  position: absolute;
-  top: 30%;
-  font-size: 40px;
-  text-align: center;
-}
 
 .result-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: lightpink;
-}
-
-.score-container,
-.time-container {
-  text-align: center;
-}
-
-.score-container h2,
-.time-container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-.score-container p,
-.time-container p {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
-  color: blueviolet;
-}
-
-.tryAgain-button {
-  margin-top: 300px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.tryAgain-button:hover {
-  background-color: #3e8e41;
-}
+    background-image: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 20px;
+  }
+  
+  .score-container h2, .time-container h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #000;
+  }
+  
+  .score-container p, .time-container p{
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 1px 1px #000;
+  }
+  
+  .tryAgain-button {
+    background-color: #fff;
+    color: #ff758c;
+    font-size: 24px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 1px 1px #000;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .tryAgain-button:hover {
+    background-color: #ff758c;
+    color: #fff;
+    box-shadow: 3px 3px #000;
+  }
+  
