@@ -65,12 +65,17 @@ const Quiz = () => {
           />
         ) : (
           <>
-            <div className="timer">
-              {remainingTime > 0 ? (
-                <p>Time Remaining: {remainingTime} seconds</p>
-              ) : (
-                <p>Time's up!</p>
-              )}
+            <div class="quiz-container">
+              <div class="question-number">
+                Question :{" "}
+                <span id="question-remaining">{currentQuestion + 1}/5</span>
+              </div>
+              <div class="timer">
+                <p>
+                  Time Remaining:{" "}
+                  <span id="time-remaining">{remainingTime}</span> seconds
+                </p>
+              </div>
             </div>
             <div className="question">
               <span id="question-number">{currentQuestion + 1}.</span>

@@ -103,3 +103,34 @@ body {
 #next-button:active {
   box-shadow: none;
 }
+
+.quiz-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: pink;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #question-remaining{
+    font-weight: bold;
+    color: rgb(107, 25, 63);
+  }
+  .question-number {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .timer {
+    font-size: 20px;
+    text-align: right;
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+  
+  #time-remaining {
+    font-weight: bold;
+    color: red;
+  }
