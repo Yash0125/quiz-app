@@ -1,14 +1,15 @@
-import React, { useState,useEffect } from "react";
-import './quiz.css';
+import React, { useState, useEffect } from "react";
+import "./quiz.css";
 import { QuizData } from "../../utils/QuizData";
+import QuizResult from "../quizResult/QuizResult";
 
 const Quiz = () => {
-
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [remainingTime, setRemainingTime] = useState(60);
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
     const timer =
@@ -48,13 +49,21 @@ const Quiz = () => {
 
   const handleSubmit = () => {
     setShowResult(true);
+    setTime(60 - remainingTime);
   };
 
   return (
     <div>
       <p className="heading-txt">Quiz App</p>
       <div className="container">
-      
+        {showResult ? (
+          <QuizResult
+            score={score}
+            totalScore={QuizData.length}
+            tryAgain={resetAll}
+            timeTaken={time}
+          />
+        ) : (
           <>
             <div className="timer">
               {remainingTime > 0 ? (
@@ -100,10 +109,10 @@ const Quiz = () => {
               />
             )}
           </>
-        
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Quiz
+export default Quiz;
