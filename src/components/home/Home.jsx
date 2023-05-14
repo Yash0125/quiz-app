@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./home.css";
 
+
 const Home = () => {
+
+  const navigate = useNavigate();
+  const handleStart = () => {
+    navigate("/quiz");
+  };
+
   return (
     <div className="container">
       <div className="header">
@@ -20,6 +28,7 @@ const Home = () => {
             contains 5 questions and has a time limit of 1 minute. For each
             correct answer you will get 1 score.
           </p>
+
           <h3>This quiz includes:</h3>
 
           <ul>
@@ -29,7 +38,7 @@ const Home = () => {
             <li>You can skip question</li>
           </ul>
 
-          <button>Take Quiz</button>
+          <button onClick={handleStart}>Take Quiz</button>
 
         </header>
 
